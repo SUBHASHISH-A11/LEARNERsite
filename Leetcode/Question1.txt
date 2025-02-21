@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Result{
+public static void main(String []args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the number");
+int num = sc.nextInt();
+//calculate the product
+int t =num;
+int product =1;
+while(num>0){
+int temp = num%10;
+product*=temp;
+num/=10;
+}
+System.out.println("the product is "+ product);
+//calculate the sum
+num=t;
+int sum =0;
+while(num>0){
+sum+=num%10;
+num/=10;
+}
+System.out.println("the sum is"+sum);
+System.out.println("the difference is"+(product -sum));
+  }
+}
+
+
+"THE CODE FOR SOLUTION OF QUESTION OF LEETCODE THAT CALCULATE THE DIFFERENCE OF THE NUMBER PRODUCT AND SUM"
+"I HOPE ALL CAN UNDERSTAND IT EASYILY"
