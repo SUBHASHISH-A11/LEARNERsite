@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Maxmin{
+public static void main(String[]args){
+max();
+min();
+}
+static void max(){
+Scanner sc = new Scanner(System.in);
+int a= sc.nextInt();
+int b = sc.nextInt();
+int c = sc.nextInt();
+if(a>b&&a>c){
+System.out.println("the max is"+a);
+}else if(b>a&&b>c){
+System.out.println("The max is"+b);
+}else if(c>a&&c>b){
+System.out.println("the max is"+c);
+  }
+ 
+}
+static void min(){
+Scanner sc = new Scanner(System.in);
+int a= sc.nextInt();
+int b = sc.nextInt();
+int c = sc.nextInt();
+if(a<b&&a<c){
+System.out.println("the min is"+a);
+}else if(b<a&&b<c){
+System.out.println("The min is"+b);
+}else if(c<a&&c<b){
+System.out.println("the min is"+c);
+  }
+ 
+}
+}
+QUESTION :"define two methods and find the maximum minimum by taking user input"
