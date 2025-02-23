@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Check{
+public static void main(String[]args){
+Evenodd();
+
+}
+//check the number is even or odd
+static void Evenodd(){
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number");
+int num = sc.nextInt();
+if(num%2==0){
+System.out.println("the number is even");
+}else{
+System.out.println("the number is odd");
+ }
+
+}
+}
+"THE QUESTION IS TO CHECK THE NUMBER IS EVEN OR BY METHODS BY USER INPUT"
+"SO THIS IS THE SOLUTION 1"
+ANOTHER CODE FOR THIS IS GIVEN BELOW:
+import java.util.Scanner;
+public class Anothermethod{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the number");
+int num = sc.nextInt();
+boolean re = evenodd(num);
+System.out.println(re);
+}
+static boolean evenodd(int num){
+return num%2==0;
+ }
+}
+"I hope all will understand easily"
+"You can try this with your logic also"
+
+
+
