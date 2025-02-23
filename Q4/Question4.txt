@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Num{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the number");
+int num = sc.nextInt();
+boolean re = prime(num);
+System.out.println(re);
+}
+static boolean prime(int num){
+int sum =0;
+for(int i=2;i<num;i++){
+if(num%i==0){
+ sum+=i;
+ }
+}
+if(sum%num==0){
+return true;
+}else{
+return false;
+   }
+ }
+}
+"THE QUESTION IS CHECK A NUMBER IS PRIME USING METHOD "
+"ANOTHER METHOD HINT:
+"USING WHILE LOOP AND CALCULATING THE SQUARE ROOT OF THE NUMBER"
