@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Digit{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the digit");
+int n = sc.nextInt();
+int result = sumofdigit(n);
+System.out.println(result);
+}
+static int sumofdigit(int n){
+int sum =0;
+while(n>0){
+int r = n%10;
+sum+=r;
+n/=10;
+}
+System.out.println(sum);
+int result2 =0;
+while(sum>0){
+result2+=sum%10;
+sum/=10;
+}
+System.out.println(result2);
+return result2;
+}
+}
+
+
+"The question is Write a java method to calculate the sum of digits of a given number until the number is a 
+single digit. using method"
