@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Checkodd{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the number");
+int n = sc.nextInt();
+boolean ans = isOdd(n);
+System.out.println(ans+" "+n+"is odd");
+}
+static boolean isOdd(int n){
+if((n&1)==1){
+return true;
+}
+return false;
+}
+}
+
+"The question is -     
+Write a Java method, isOdd( ), that takes an int i and returns true if and only if i is odd. Your 
+method can't use the multiplication, modulus, or division operators, The method signature is 
+as follows. 
+ 
+public static boolean isOdd(int n){
+}"
+
+"Another method for this is we use while loop in the method to check odd"
+"THE CODE IS ONLY (WHILE part)
+CODE:
+while(n>1){
+n =n-2;
+}
+if(n==1){
+return true;
+}
+//else
+return false;
+//then close the method;
+
+
+
