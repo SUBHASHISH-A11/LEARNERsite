@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Spynumber{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the number");
+int num = sc.nextInt();
+int x= num;
+int sum =0;
+while(num>0){
+int r = num%10;
+sum+= r;
+num/=10;
+
+}
+System.out.println("The sum is"+sum);
+int product =1;
+while(x>0){
+int re = x%10;
+product*=re;
+x/=10;
+
+}System.out.println("The product is"+product);
+if(sum==product){
+System.out.println("spy number");
+}else{
+System.out.println("not");
+ }
+}
+}
+
+
+"The question is spy number"
