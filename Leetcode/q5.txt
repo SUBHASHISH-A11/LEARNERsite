@@ -1,0 +1,30 @@
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        int start = 0, end = letters.length - 1;
+
+        while (start <= end) { // Binary search loop
+            int mid = start + (end - start) / 2; // Avoids integer overflow
+
+            if (letters[mid] > target) {
+                end = mid - 1; // Search left side
+            } else {
+                start = mid + 1; // Search right side
+            }
+        }
+
+        // Since the array is circular, if we don't find a larger letter, return the first element
+        return letters[start % letters.length]; 
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        
+        // Example 1
+        char[] letters1 = { 'c', 'f', 'j' };
+        char target1 = 'a';
+        System.out.println("Output: " + solution.nextGreatestLetter(letters1, target1)); // Expected: 'c'
+
+       
+    }
+}
+"THE QUESTION IS FIND SMALLEST NUMBER GREATER THAN TARGET"
