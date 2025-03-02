@@ -1,0 +1,30 @@
+public class Assignment1Q4 {
+    public static void main(String[] args) {
+
+
+                String str = "carbon";
+                int n = str.length();
+                char[] chars = str.toCharArray();
+
+                for (int i = 0; i < n; i++) {
+                    for (int j = 0; j < n; j++) {
+                        if (j == i) continue;
+                        for (int k = 0; k < n; k++) {
+                            if (k == i || k == j) continue;
+                            for (int l = 0; l < n; l++) {
+                                if (l == i || l == j || l == k) continue;
+                                for (int m = 0; m < n; m++) {
+                                    if (m == i || m == j || m == k || m == l) continue;
+                                    for (int o = 0; o < n; o++) {
+                                        if (o == i || o == j || o == k || o == l || o == m) continue;
+                                        System.out.println("" + chars[i] + chars[j] + chars[k] + chars[l] + chars[m] + chars[o]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+"THIS IS THE ANSWER"
