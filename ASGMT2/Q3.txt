@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class Product{
+    //instance variable
+    int productid;
+    double price;
+    int quantity;
+    static  double totalprice=0;
+
+    //use a parameterized constructor
+    //It means in a method we pass some values
+    //As per the instruction of question
+//When we use this keyward you are assigning the value of the constructor parameter price to the instance variable price.
+    public Product(int productid,double price, int quantity){
+       this. productid = productid;
+       this. price = price;
+       this. quantity = quantity;
+       this. totalprice = price*quantity;
+    }
+
+    //Method to display the data
+    void display(){
+        System.out.println("The product id "+productid);
+        System.out.println("The price is"+price);
+        System.out.println("The quantity is"+quantity);
+    }
+
+    //Method to dispaly total price
+    static void Displaytotalprice(){
+        System.out.println("The total price is "+totalprice);
+    }
+}
+public class Q3 {
+    public static void main(String[] args) {
+
+        //Define the 5 products
+        //we pass the value because we use parameterized constructor
+Product p1 = new Product(101,50.5,2);
+Product p2 = new Product(102,40.9,3);
+        Product p3 = new Product(103,60.0,4);
+        Product p4 = new Product(104,23.4,1);
+        Product p5 = new Product(105,25.7,3);
+
+        //Now display the data
+        p1.display();
+        p2.display();
+        p3.display();
+        p4.display();
+        p5.display();
+
+        //total product is
+        Product.Displaytotalprice();
+    }
+}
+"THIS IS THE CODE"
