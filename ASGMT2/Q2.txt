@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class Complex{
+    int real;
+    int imag;
+    Scanner sc = new Scanner(System.in);
+    //Method to set Data
+    void setData()
+    {
+        System.out.println("enter the real value");
+        real = sc.nextInt();
+        System.out.println("enter the imaginary value");
+        imag = sc.nextInt();
+    }
+    //Method to Display Data
+    void display(){
+        System.out.println("The  value is"+real+" +"+imag+"i");
+    }
+}
+public class Q2 {
+    public static void main(String[] args) {
+        //For number 1
+ Complex n1 = new Complex();
+ n1.setData();
+ n1.display();
+ //For number 2
+ Complex n2 = new Complex();
+ n2.setData();
+ n2.display();
+ //For sum result
+ Complex result = add(n1,n2);
+        System.out.println(add(n1,n2));
+result.display();
+    }
+    //Method to add complex value becasue we know that complex value means a+bi or like this
+    public static Complex add(Complex n1, Complex n2) {
+       Complex sum = new Complex();
+       sum.real = n1.real+n2.real;
+       sum.imag = n1.imag+n2.imag;
+       return  sum;
+        }
+    }
+
+"THIS IS THE CODE"
