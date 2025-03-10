@@ -1,3 +1,0 @@
-THE CODE FOR PRIMENUMBER IS :
-
-public class
