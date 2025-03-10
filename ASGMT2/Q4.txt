@@ -1,0 +1,59 @@
+class Deposit{
+    long Principal;
+    int Time;
+    double Rate;
+    double TotalAmt;
+    //I use this keyward because you are assigning the value of the constructor parameter price to the instance variable price.
+    //Constructor 1
+    public Deposit(){
+         this.Principal= 0;
+        this. Time =0;
+        this.Rate =0.0;
+        CalculateTotalAmt();
+    }
+    //Constructor 2
+    public Deposit(long Principal,int Time,double Rate){
+        this.Principal = Principal;
+        this.Time= Time;
+        this.Rate = Rate;
+        CalculateTotalAmt();
+    }
+    //Constructor 3
+    public  Deposit(long Principal,int Time){
+        this.Principal = Principal;
+        this.Time = Time;
+        this.Rate =  5.0;
+        CalculateTotalAmt();
+    }
+    //constructor 4
+    public Deposit(long Principal,double rate){
+        this.Principal = Principal;
+        this.Time =1;
+        this.Rate = Rate;
+        CalculateTotalAmt();
+    }
+    public void CalculateTotalAmt() {
+        TotalAmt = Principal+(Principal*Rate*Time)/100;
+    }
+    public void Display(){
+        System.out.println("The Principal is"+Principal);
+        System.out.println("The Time is "+Time);
+        System.out.println("The Rate is "+Rate);
+        System.out.println("The Total amount "+TotalAmt);
+    }
+    }
+
+public class Q4 {
+    public static void main(String[] args) {
+Deposit d1 = new Deposit();
+Deposit d2 = new Deposit(7000,2,3.0);
+Deposit d3 = new Deposit(8000,4);
+Deposit d4 = new Deposit(5000,2.0);
+    d1.Display();
+    d2.Display();
+    d3.Display();
+    d4.Display();
+
+    }
+}
+"This is the code"
