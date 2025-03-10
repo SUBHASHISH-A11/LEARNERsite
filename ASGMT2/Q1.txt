@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class person{
+     int age;
+    String name;
+    Scanner sc = new Scanner(System.in);
+    //Method for set data
+     void setdata() {
+         System.out.println("enter the age");
+    age = sc.nextInt();
+         System.out.println("enter the name");
+    name = sc.next();
+    }
+    //Method for Display data
+    void displaydata(){
+        System.out.println("the age is"+age);
+        System.out.println("the name is "+name);
+    }
+}
+public class Q1 {
+    public static void main(String[] args) {
+ person p1 = new person();
+ p1.setdata();
+ p1.displaydata();
+ //for person2
+        person p2 = new person();
+        p2.setdata();
+        p2.displaydata();
+        if(p1.age<p2.age){
+            System.out.println(p1.name+" is younger");
+        }else{
+            System.out.println(p2.name+" is younger");
+        }
+    }
+}
+"THIS IS CODE"
