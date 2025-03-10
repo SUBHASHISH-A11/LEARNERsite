@@ -1,0 +1,36 @@
+
+class Person {
+    int age;
+    String name;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+//I use inheritance here because in the question it given a base class and a derived class  
+class Employee extends Person {
+    int salary;
+    double Eid;
+
+    public Employee(String name, int age, int salary, double Eid) {
+        super(name, age); // Calling the parent constructor
+        this.salary = salary;
+        this.Eid = Eid;
+    }
+
+    public void Display() {
+        System.out.println("The name is " + name);
+        System.out.println("The age is " + age);
+        System.out.println("The Eid is " + Eid);
+        System.out.println("The salary is " + salary);
+    }
+}
+
+public class Q5 {
+    public static void main(String[] args) {
+        Employee emp = new Employee("subham", 20, 10101, 123);
+        emp.Display();
+    }
+}
+"THIS IS THE CODE"
