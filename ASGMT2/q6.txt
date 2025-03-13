@@ -1,0 +1,39 @@
+//As per the given question we use inheritance
+//so first base class
+class Vehicle{
+    String model;
+    int year;
+    //AS the instruction given the instance variable are initialized by constructor
+    public  Vehicle(String model,int year){
+        this.model= model;
+        this.year = year;
+    }
+}
+class Car extends  Vehicle{
+    int carId;
+    double price;
+    public Car(String model,int year,int carId,double price){
+        //I use super keyword to use the data of Vehicle class
+        super(model, year);
+        this.carId = carId;
+        this.price = price;
+
+    }
+    //AS per the question the display method for car
+    public  void carDisplay(){
+        System.out.println("car model is"+model);
+        System.out.println("car year is"+year);
+        System.out.println("car carID is"+carId);
+        System.out.println("car price is "+price);
+    }
+}
+//MAIN METHOD
+public class Q6 {
+    public static void main(String[] args) {
+        Car obj = new Car("Mercedes",2025,1234,7000000);
+        obj.carDisplay();
+
+
+    }
+}
+
