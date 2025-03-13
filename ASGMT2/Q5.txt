@@ -1,36 +1,67 @@
 
-class Person {
-    int age;
-    String name;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+abstract  class  Shape {
+    //First I create an abstract class then define the area using abstract method then I use the method in normal class
+    //As per the definition we can use abstract method of an abstract class in a normal class by extend the abstract class by normal class
+    abstract double area();
 }
-//I use inheritance here because in the question it given a base class and a derived class  
-class Employee extends Person {
-    int salary;
-    double Eid;
+//As  I mentioned above I do it
+    class  square extends  Shape {
+        double side;
 
-    public Employee(String name, int age, int salary, double Eid) {
-        super(name, age); // Calling the parent constructor
-        this.salary = salary;
-        this.Eid = Eid;
+        //you can use directly square method without using public also
+    //This method I use for initialize the value of side same in other three class
+        public square(double side) {
+            this.side = side;
+        }
+        //   you can use the method directly
+        //As I extend the class square by shape, so I can use the function of that class in this class
+        //concept of inheritance
+         public double area() {
+            return side * side;
+        }
     }
+        //Then I create another class for Triangle
+        class Triangle extends  Shape{
+            double base,height;
+           public Triangle(double base,double height){
+                this.base = base;
+                this.height= height;
+            }
+            //It a simple method only use for to calculate area example when you read the methods you define return type methods same like this
+            //but here we do not use static
+          public   double area(){
+               return  1.0/2*(base*height);
+            }
 
-    public void Display() {
-        System.out.println("The name is " + name);
-        System.out.println("The age is " + age);
-        System.out.println("The Eid is " + Eid);
-        System.out.println("The salary is " + salary);
-    }
-}
+        }
+        class Circle extends  Shape{
+             double radious;
+            public Circle(double radious){
+                this.radious= radious;
+            }
+            public  double area(){
+                return  Math.PI*(radious*radious);
+            }
 
+        }
+        //MAIN CLASS
 public class Q5 {
     public static void main(String[] args) {
-        Employee emp = new Employee("subham", 20, 10101, 123);
-        emp.Display();
-    }
-}
-"THIS IS THE CODE"
+        //Here I create the object like this because Shape is abstract class and all three class extend it
+        //An abstract class is a class in which we can not create object directly it contains method without body followed by semicolon
+
+        Shape square = new square(5);
+        Shape Triangle = new Triangle(8,2);
+        Shape Circle = new Circle(4);
+        //call the method area by object of each class
+        System.out.println( square.area());
+        System.out.println(Triangle.area());
+        System.out.println(Circle.area());
+
+
+            }
+        }
+
+
+
+
