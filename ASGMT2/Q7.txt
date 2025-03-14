@@ -1,0 +1,52 @@
+class Shape{
+    String colour;
+    public Shape(String colour){
+        this.colour= colour;
+    }
+}
+class Circle extends  Shape{
+    double radious;
+    public Circle(String colour,double radious){
+        super( colour);
+        this.radious = radious;
+    }
+    public double area(){
+        return Math.PI*(radious*radious);
+
+    }
+    public void  display(){
+        System.out.println("for circle");
+        System.out.println("The radious is "+radious);
+        System.out.println("The colour is"+colour);
+    }
+}
+class Rectangle extends  Shape{
+    double length;
+    double width;
+    public  Rectangle(double length,double width,String colour){
+        super(colour);
+        this.length= length;
+        this.width= width;
+    }
+ public double area(){
+        return length*width;
+    }
+    public void display(){
+        System.out.println("for rectangle");
+        System.out.println("The colour is"+colour);
+        System.out.println("The length is "+length);
+        System.out.println("The width is"+width);
+    }
+}
+
+public class Q7 {
+    public static void main(String[] arg) {
+        Circle obj1 = new Circle("white",6);
+        Rectangle obj2 = new Rectangle(4.5,9,"blue");
+        obj1.display();
+        System.out.println("The area is "+obj1.area());
+        obj2.display();
+        System.out.println("The area is"+obj2.area());
+    }
+}
+
